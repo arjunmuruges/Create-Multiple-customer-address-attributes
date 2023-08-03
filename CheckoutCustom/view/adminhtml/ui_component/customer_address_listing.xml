@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+       <columns name="customer_address_columns">
+
+           <column name="fein_number" sortOrder="90" >
+               <settings>
+                   <filter>text</filter>
+                   <label translate="true">FEIN Number</label>
+               </settings>
+           </column>
+
+        <column name="tobacco_license_number"  sortOrder="90" >
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Tobacco License Number</label>
+            </settings>
+        </column>
+
+        <column name="tobacco_license_expiry_date"  sortOrder="90" >
+            <settings>
+                <filter>dateRange</filter>
+                <label translate="true">Tobacco License Expiry Date</label>
+            </settings>
+        </column>
+
+        <column name="tobacco_license_type" component="Magento_Ui/js/grid/columns/select" sortOrder="90" class="Alfakher\CheckoutCustom\Ui\Component\Listing\Address\Column\AddressAttributes">
+            <settings>
+                <options class="Alfakher\CheckoutCustom\Model\Config\Source\TobaccoType"/>
+                <filter>select</filter>
+                <dataType>select</dataType>
+                <label translate="true">Type of Tobacco License</label>
+            </settings>
+        </column>
+
+        <column name="resale_license_number" sortOrder="90" >
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Resale License Number</label>
+            </settings>
+        </column>
+
+        <column name="resale_license_expiry_date"  sortOrder="91">
+            <settings>
+                <filter>dateRange</filter>
+                <label translate="true">Resale License Expiry Date</label>
+            </settings>
+        </column>
+
+        <column name="ship_add_dropdown" component="Magento_Ui/js/grid/columns/select" sortOrder="90" class="Alfakher\CheckoutCustom\Ui\Component\Listing\Address\Column\AddressAttributes">
+            <settings>
+                <options class="Alfakher\CheckoutCustom\Model\Config\Source\ShipDropdown"/>
+                <dataType>select</dataType>
+                <filter>select</filter>
+                <label translate="true">Shipping address classification dropdown</label>
+            </settings>
+        </column>
+
+        <column name="nexus_location" component="Magento_Ui/js/grid/columns/select" sortOrder="90" class="Alfakher\CheckoutCustom\Ui\Component\Listing\Address\Column\AddressAttributes">
+            <settings>
+                <options class="Alfakher\CheckoutCustom\Model\Config\Source\NexusLocation"/>
+                <filter>select</filter>
+                <dataType>select</dataType>
+                <label translate="true">NEXUS Location</label>
+            </settings>
+        </column>
+
+    </columns>
+</listing>
